@@ -1,7 +1,7 @@
 import Debug "mo:base/Debug";
-// import Principal "mo:base/Principal";
+import Principal "mo:base/Principal";
 
-actor class NFT (name: Text, owner: Principal, content: [Nat8]) {
+actor class NFT (name: Text, owner: Principal, content: [Nat8]) = this { // this represents the entire actor class
     // Debug.print(debug_show ("NFT contract started"));
 
 //     // Debug.print(debug_show ("NFT contract started"));
@@ -21,6 +21,10 @@ actor class NFT (name: Text, owner: Principal, content: [Nat8]) {
     public query func getAsset() : async [Nat8]{
         return imageBytes; 
     };  
+
+    public query func getCanisterId() : async Principal {
+        return Principal.fromActor(this);
+    };
 
 
 };
