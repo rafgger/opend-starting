@@ -13,9 +13,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Item /> */}
-      {/* <Minter /> */}
-      <Item id={NFTID} />
+      <Minter />
+      {/* <Item id={NFTID} /> */}
       {/* <img className="bottom-space" src={homeImage} /> */}
       <Footer />
     </div>
